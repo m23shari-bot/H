@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="انضم إلى فريق بناء منصة تعليمية تقنية عالمية. نبحث عن مطوري واجهات أمامية محترفين باستخدام React.">
+    <meta name="description" content="انضم إلى فريق بناء منصة تعليمية تقنية عالمية. نبحث عن مطوري واجهات أمامية محترفين باستخدام React. تواصل معنا عبر تيليجرام.">
     <title>انضم إلينا | مطورو واجهات أمامية - منصة تعليمية متكاملة</title>
     <!-- Google Fonts (Arabic & English) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -189,7 +189,7 @@
             text-align: center;
         }
 
-        .hero-image img {
+        .hero-image svg {
             max-width: 100%;
             border-radius: 1.5rem;
             box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
@@ -346,88 +346,67 @@
             font-size: 1.2rem;
         }
 
-        /* Form Section */
-        .form-section {
-            background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
+        /* Telegram Contact Section - بديل النموذج */
+        .telegram-section {
+            background: linear-gradient(135deg, #e6f2ff 0%, #ffffff 100%);
             border-radius: 2rem;
             padding: 2.5rem;
             margin: 3rem 0;
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
             border: 1px solid #e2e8f0;
-        }
-
-        .form-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .form-content {
-            flex: 1;
-        }
-
-        .form-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .form-fields {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .input-group {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .input-group label {
-            font-weight: 600;
-            color: #0f172a;
-        }
-
-        .input-group input, .input-group textarea {
-            padding: 0.9rem 1rem;
-            border-radius: 1rem;
-            border: 1px solid #cbd5e1;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: 0.2s;
-            background: white;
-        }
-
-        .input-group input:focus, .input-group textarea:focus {
-            outline: none;
-            border-color: #2563eb;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-        }
-
-        button[type="submit"] {
-            background: #0f172a;
-            color: white;
-            border: none;
-            padding: 0.9rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: 0.2s;
-            margin-top: 0.5rem;
-        }
-
-        button[type="submit"]:hover {
-            background: #2563eb;
-        }
-
-        .form-note {
-            font-size: 0.8rem;
-            color: #5b6e8c;
             text-align: center;
-            margin-top: 1rem;
+        }
+
+        .telegram-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .telegram-icon {
+            font-size: 4rem;
+            color: #0088cc;
+            background: #ffffff;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0, 136, 204, 0.2);
+        }
+
+        .telegram-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .telegram-card p {
+            font-size: 1.1rem;
+            color: #334155;
+            max-width: 500px;
+        }
+
+        .btn-telegram {
+            background: #0088cc;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(0, 136, 204, 0.3);
+        }
+
+        .btn-telegram:hover {
+            background: #006699;
+            transform: scale(1.02);
+            box-shadow: 0 12px 25px rgba(0, 136, 204, 0.4);
         }
 
         /* Footer */
@@ -456,8 +435,8 @@
             .two-columns {
                 flex-direction: column;
             }
-            .form-grid {
-                flex-direction: column;
+            .telegram-card h3 {
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -473,7 +452,7 @@
         <div class="nav-links">
             <a href="#roles">الدور</a>
             <a href="#offer">المميزات</a>
-            <a href="#apply" class="btn-outline-light">تقدّم الآن</a>
+            <a href="#contact" class="btn-outline-light">تواصل الآن</a>
         </div>
     </div>
 </header>
@@ -491,12 +470,11 @@
                 <div class="stat"><span class="stat-number">5</span><span class="stat-label">جوائز تصميم</span></div>
             </div>
             <div class="btn-group">
-                <a href="#apply" class="btn-primary">قدّم طلبك الآن <i class="fas fa-arrow-left"></i></a>
+                <a href="#contact" class="btn-primary">تقدّم عبر تيليجرام <i class="fab fa-telegram"></i></a>
                 <a href="#roles" class="btn-secondary">اكتشف المهام <i class="fas fa-chevron-down"></i></a>
             </div>
         </div>
         <div class="hero-image">
-            <!-- SVG illustration placeholder -->
             <svg width="100%" height="220" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" style="background: #eef2ff; border-radius: 1.5rem;">
                 <rect width="400" height="300" fill="#eef2ff" rx="20" />
                 <circle cx="200" cy="120" r="50" fill="#2563eb" fill-opacity="0.2" />
@@ -581,39 +559,18 @@
         </div>
     </div>
 
-    <!-- Lead Generation Form (Optimized for conversions) -->
-    <div id="apply" class="form-section">
-        <div class="form-grid">
-            <div class="form-content">
-                <h3>📩 انضم إلى الرحلة</h3>
-                <p>سجل بياناتك وسنعاود الاتصال بك خلال 48 ساعة. فرصة لبناء تجربة تعليمية استثنائية.</p>
-                <div style="margin-top: 1rem;">
-                    <span style="background:#eef2ff; padding:0.3rem 1rem; border-radius: 30px;">✔ سريع وسهل</span>
-                </div>
+    <!-- Telegram Contact Section - الوسيلة الوحيدة للتواصل -->
+    <div id="contact" class="telegram-section">
+        <div class="telegram-card">
+            <div class="telegram-icon">
+                <i class="fab fa-telegram-plane"></i>
             </div>
-            <div class="form-fields">
-                <form id="leadForm" action="#" method="post">
-                    <div class="input-group">
-                        <label><i class="fas fa-user"></i> الاسم الكامل</label>
-                        <input type="text" name="fullname" placeholder="أحمد محمد" required>
-                    </div>
-                    <div class="input-group">
-                        <label><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
-                        <input type="email" name="email" placeholder="example@domain.com" required>
-                    </div>
-                    <div class="input-group">
-                        <label><i class="fas fa-link"></i> رابط GitHub / Portfolio</label>
-                        <input type="url" name="portfolio" placeholder="https://github.com/...">
-                    </div>
-                    <div class="input-group">
-                        <label><i class="fas fa-comment"></i> رسالة مختصرة (اختياري)</label>
-                        <textarea rows="2" name="message" placeholder="أخبرنا عن تجربتك مع React..."></textarea>
-                    </div>
-                    <button type="submit">أرسل طلب الانضمام <i class="fas fa-arrow-left"></i></button>
-                    <div class="form-note">نحن نقدّر وقتك، لن يتم مشاركة بياناتك مع أي طرف ثالث.</div>
-                </form>
-                <div id="formFeedback" style="margin-top: 0.8rem; font-weight: 500; text-align: center;"></div>
-            </div>
+            <h3>📩 تواصل معنا مباشرة عبر تيليجرام</h3>
+            <p>أرسل لنا ملفك الشخصي (GitHub، LinkedIn، أو نماذج أعمالك) وسنرد عليك خلال 24 ساعة.</p>
+            <a href="http://t.me/MBSUK" target="_blank" rel="noopener noreferrer" class="btn-telegram">
+                <i class="fab fa-telegram"></i> ابدأ المحادثة الآن
+            </a>
+            <p style="font-size: 0.85rem; color: #5b6e8c; margin-top: 0.5rem;">@MBSUK | اضغط للدردشة المباشرة</p>
         </div>
     </div>
 </main>
@@ -623,27 +580,5 @@
     <p style="margin-top: 0.5rem; font-size: 0.8rem;"><i class="fas fa-code"></i> React • UX متقدم • فريق شغوف</p>
 </footer>
 
-<script>
-    // Simple form handling (prevent default, simulate submission)
-    const form = document.getElementById('leadForm');
-    const feedbackDiv = document.getElementById('formFeedback');
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const name = form.fullname.value.trim();
-        const email = form.email.value.trim();
-        if (!name || !email) {
-            feedbackDiv.innerHTML = '<span style="color:#dc2626;">❌ الرجاء تعبئة الاسم والبريد الإلكتروني</span>';
-            return;
-        }
-        // Simulate success (would send to backend/api)
-        feedbackDiv.innerHTML = '<span style="color:#16a34a;">✅ تم استلام طلبك بنجاح! سيتواصل معك فريقنا قريباً.</span>';
-        form.reset();
-        // Optional: you can also send data to Google Forms / webhook via fetch
-        console.log({ name, email, portfolio: form.portfolio.value, message: form.message.value });
-        setTimeout(() => {
-            feedbackDiv.innerHTML = '';
-        }, 5000);
-    });
-</script>
 </body>
-  </html>
+    </html>
